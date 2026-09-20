@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Astro output
+.astro/
+dist/
+build/
+
+# Local configuration
+.env
+.env.*
+!.env.example
+
+# Test and coverage output
+coverage/
+playwright-report/
+test-results/
+
+# Logs and local files
+*.log
+*.tar.gz
+.DS_Store
+.idea/
+.vscode/

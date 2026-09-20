@@ -1,0 +1,91 @@
+---
+import ReviewCarousel from '../components/ReviewCarousel.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteData } from '../data/site';
+---
+
+<BaseLayout title={`${siteData.name} | Restaurant Website`} description={siteData.introduction}>
+  <header class="header shell">
+    <a class="brand" href="#top" aria-label={`${siteData.name} homepage`}>
+      <span>{siteData.name}</span>
+      {siteData.englishName && <small>{siteData.englishName}</small>}
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#story">About</a>
+      {siteData.reviews.length > 0 && <a href="#reviews">Reviews</a>}
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="button button--outline" href={siteData.reservationUrl}>Reserve a table</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__image" role="img" aria-label={`${siteData.name} signature dish`}></div>
+      <div class="hero__shade"></div>
+      <div class="hero__content shell">
+        <p class="eyebrow eyebrow--light">{siteData.eyebrow}</p>
+        <h1>{siteData.headline}</h1>
+        <p>{siteData.introduction}</p>
+        <a class="button button--fill" href={siteData.reservationUrl}>Reserve a table</a>
+      </div>
+    </section>
+
+    <section class="story section shell" id="story">
+      <div>
+        <p class="eyebrow">THE STORY</p>
+        <h2>Every visit<br />reveals something new.</h2>
+      </div>
+      <p class="story__copy">{siteData.story}</p>
+    </section>
+
+    <section class="highlights section">
+      <div class="shell">
+        <p class="eyebrow">WHY PEOPLE RETURN</p>
+        <div class="highlights__grid">
+          {siteData.highlights.map((highlight, index) => (
+            <article>
+              <span>0{index + 1}</span>
+              <h3>{highlight.title}</h3>
+              <p>{highlight.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {siteData.reviews.length > 0 && (
+      <div id="reviews">
+        <ReviewCarousel reviews={siteData.reviews} />
+      </div>
+    )}
+
+    <section class="experience section">
+      <div class="experience__image" role="img" aria-label={`${siteData.name} dining room`}></div>
+      <div class="experience__copy">
+        <p class="eyebrow eyebrow--light">THE EXPERIENCE</p>
+        <h2>Take your time,<br />and enjoy the meal.</h2>
+        <p>{siteData.introduction}</p>
+      </div>
+    </section>
+
+    <section class="visit section shell" id="visit">
+      <div>
+        <p class="eyebrow">VISIT</p>
+        <h2>Next time,<br />take a seat at the table.</h2>
+      </div>
+      <dl>
+        <div><dt>Address</dt><dd>{siteData.address}</dd></div>
+        <div><dt>Opening hours</dt><dd>{siteData.hours}</dd></div>
+        <div><dt>Phone</dt><dd>{siteData.phone}</dd></div>
+      </dl>
+      <a class="button button--dark" href={siteData.reservationUrl}>Make a reservation</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <strong>{siteData.name}</strong>
+      <span>(c) 2026 ALL RIGHTS RESERVED</span>
+    </div>
+  </footer>
+</BaseLayout>
