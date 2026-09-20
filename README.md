@@ -24,13 +24,33 @@ skills/
    `- assets/
 ```
 
-## Installation
+## Installation and management
 
-Install a skill from this repository with the Codex skill installer:
+Install the skill with the `skills` CLI through `npx`:
 
 ```bash
-python /home/devin/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo nildev-jp/skills --path restaurant-review-site --ref main
+npx skills add nildev-jp/skills --skill restaurant-review-site
 ```
+
+List installed skills:
+
+```bash
+npx skills list
+```
+
+Update the skill:
+
+```bash
+npx skills update restaurant-review-site
+```
+
+Remove the skill:
+
+```bash
+npx skills remove restaurant-review-site
+```
+
+The repository does not require a root `package.json`. The `skills` CLI reads each nested `SKILL.md` and manages the installed copy for the selected agent.
 
 ## License
 
