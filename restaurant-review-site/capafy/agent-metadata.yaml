@@ -1,0 +1,5 @@
+interface:
+  display_name: "Restaurant Review Site"
+  short_description: "Generate a data-grounded Astro restaurant website from a Google restaurant link"
+  brand_color: "#B95F3D"
+  default_prompt: "Use $restaurant-review-site with this Google restaurant link to create and run a complete Astro website with verified business information, generated brand photography, and Google-style review cards only when actual review text can be retrieved."

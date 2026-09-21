@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title description">
+  <title id="title">Restaurant Review Site logo</title>
+  <desc id="description">A terracotta location marker containing a restaurant website card on a dark green rounded square.</desc>
+  <rect x="72" y="72" width="880" height="880" rx="220" fill="#173C32" />
+  <path d="M512 170c-176 0-300 126-300 294 0 214 257 389 278 403a40 40 0 0 0 44 0c21-14 278-189 278-403 0-168-124-294-300-294Z" fill="#B95F3D" />
+  <rect x="336" y="318" width="352" height="270" rx="58" fill="#F4EBDD" />
+  <circle cx="393" cy="373" r="14" fill="#B95F3D" />
+  <circle cx="437" cy="373" r="14" fill="#D18A70" />
+  <circle cx="481" cy="373" r="14" fill="#173C32" />
+  <path d="M371 423h282" stroke="#173C32" stroke-width="22" stroke-linecap="round" />
+  <circle cx="439" cy="497" r="49" fill="none" stroke="#B95F3D" stroke-width="20" />
+  <path d="M524 470h96M524 520h70" stroke="#173C32" stroke-width="20" stroke-linecap="round" />
+  <path d="M456 685h112" stroke="#F4EBDD" stroke-width="28" stroke-linecap="round" />
+</svg>
